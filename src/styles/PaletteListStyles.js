@@ -1,12 +1,29 @@
-import sizes from "./sizes"
+import sizes from "./sizes";
+import bg from './bg.svg'
 
 export default {
+  "@global":{
+    ".fade-exit": {
+      opacity: 1
+    },
+    ".fade-exit-active": {
+      opacity: 0,
+      transition: "opacity 500ms ease-out"
+    }
+  },
   root: {
     backgroundColor: "blue",
     height: "100vh",
     display: "flex",
     alignItems: "flex-start",
-    justifyContent: "center"
+    justifyContent: "center",
+    // background by SVGBackgrounds.com
+    backgroundColor: "#fffdf0;",
+    backgroundImage: `url(${bg})`,
+    overflow: "scroll"
+  },
+  heading: {
+    padding: "2rem"
   },
   conatiner: {
     width: "50%",

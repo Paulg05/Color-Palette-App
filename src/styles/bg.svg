@@ -1,0 +1,14 @@
+﻿<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%' >
+  <rect fill='#fffdf0' width='24' height='24'/>
+  <defs>
+    <linearGradient id='a' x1='0' x2='0' y1='0' y2='1' gradientTransform='rotate(11,0.5,0.5)'>
+      <stop offset='0' stop-color='#182680'/>
+      <stop offset='1' stop-color='#a1500e'/>
+    </linearGradient>
+  </defs>
+  <pattern id='b' width='19' height='19' patternUnits='userSpaceOnUse'>
+    <circle fill='#fffdf0' cx='9.5' cy='9.5' r='9.5'/>
+  </pattern>
+  <rect width='100%' height='100%' fill='url(#a)'/>
+  <rect width='100%' height='100%' fill='url(#b)' fill-opacity='0.16'/>
+</svg>
