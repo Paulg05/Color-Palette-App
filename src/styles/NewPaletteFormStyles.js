@@ -1,5 +1,7 @@
 import {DRAWER_WIDTH} from '../constants';
 const drawerWidth = DRAWER_WIDTH;
+//styles for the left drawer
+
 
 const styles = theme => ({
   root: {
