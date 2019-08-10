@@ -5,7 +5,6 @@ import PaletteFooter from "./PaletteFooter";
 import Navbar from "./Navbar";
 import { withStyles } from "@material-ui/styles";
 import styles from './styles/PaletteStyles';
-import Palette from "./Palette";
 
 
 
