@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Select from "@material-ui/core/Select";
-import MenuItem from "@material-ui/core/MenuItem"
-import SnackBar from "@material-ui/core/SnackBar";
+import MenuItem from "@material-ui/core/MenuItem";
+import Snackbar from "@material-ui/core/Snackbar";
 import CloseIcon from "@material-ui/icons/Close";
 import IconButton from "@material-ui/core/IconButton";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import { withStyles } from "@material-ui/styles"
+import { withStyles } from "@material-ui/styles";
 import styles from "./styles/NavbarStyles";
-// import "./Navbar.css";
-
 
 class Navbar extends Component {
   constructor(props) {
@@ -35,21 +33,21 @@ class Navbar extends Component {
     return (
       <header className={classes.Navbar}>
         <div className={classes.logo}>
-          <Link to='/'> ReactColorPicker</Link>
+          <Link to="/"> ReactColorPicker</Link>
         </div>
         {showingAllColors && (
-        <div>
-          <span>Level: {level}</span>
-          <div className={classes.slider}>
-            <Slider
-              defaultValue={level}
-              min={100}
-              max={900}
-              step={100}
-              onAfterChange={changeLevel}
-            />
+          <div>
+            <span>Level: {level}</span>
+            <div className={classes.slider}>
+              <Slider
+                defaultValue={level}
+                min={100}
+                max={900}
+                step={100}
+                onAfterChange={changeLevel}
+              />
+            </div>
           </div>
-        </div>
         )}
         <div className={classes.selectContainer}>
           <Select value={format} onChange={this.handleFormatChange}>
@@ -58,11 +56,15 @@ class Navbar extends Component {
             <MenuItem value="rgba"> RGBA - rgba(255,255,255, 1.0)</MenuItem>
           </Select>
         </div>
-        <SnackBar
+        <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
           open={this.state.open}
           autoHideDuration={3000}
-          message={<span id="message-id">Format Changed To {format.toUpperCase()} </span>}
+          message={
+            <span id="message-id">
+              Format Changed To {format.toUpperCase()}{" "}
+            </span>
+          }
           ContentProps={{ "aria-describeby": "message-id" }}
           onClose={this.closeSnackbar}
           action={[
